@@ -13,5 +13,6 @@
 @property (readonly) NSString *country;
 @property (readonly) NSString *released;
 @property (readonly) NSString *catno;
+@property (readonly) NSString *label;
 
 @end

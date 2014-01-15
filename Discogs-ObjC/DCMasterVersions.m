@@ -23,11 +23,9 @@
     if (!self)
         return nil;
     
-    DCObjectMapping *versionToReleaseMapping = [DCObjectMapping mapKeyPath:@"versions" toAttribute:@"releases" onClass:[self class]];
-    DCArrayMapping *versionMapper = [DCArrayMapping mapperForClassElements:[DCMasterVersion class] forAttribute:@"releases" onClass:[self class]];
+    DCArrayMapping *versionMapper = [DCArrayMapping mapperForClassElements:[DCMasterVersion class] forAttribute:@"versions" onClass:[self class]];
     
     DCParserConfiguration *config = [DCParserConfiguration configuration];
-    [config addObjectMapping:versionToReleaseMapping];
     [config addArrayMapper:versionMapper];
     
     DCKeyValueObjectMapping *parser = [DCKeyValueObjectMapping mapperForClass:[self class] andConfiguration:config];

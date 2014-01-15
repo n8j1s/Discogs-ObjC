@@ -6,8 +6,13 @@
 //  Copyright (c) 2014 Ogilvy. All rights reserved.
 //
 
-#import "DCPaginatedReleases.h"
+#import "DCPagination.h"
+#import "DCBaseObject.h"
+@interface DCMasterVersions : DCBaseObject
 
-@interface DCMasterVersions : DCPaginatedReleases
+@property (readonly) DCPagination *pagination;
+@property (readonly) NSArray *versions;
+
+
 
 @end

@@ -8,19 +8,22 @@
 
 #import <Foundation/Foundation.h>
 
-typedef NS_ENUM(NSUInteger, SearchType)
+
+
+typedef NS_ENUM(NSInteger, DCSearchType)
 {
     release,
     master,
     artist,
     label
 };
+
 #define kSearchTypeArrayValue(enum) [@[@"release", @"master", @"artist", @"label"] objectAtIndex:enum]
 
 
 @interface DCSearchRequest : NSObject
 
-@property (nonatomic, assign) SearchType searchType;
+@property (nonatomic, assign) DCSearchType searchType;
 @property (nonatomic, strong) NSString *query;
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSString *release_title;

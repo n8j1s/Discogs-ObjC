@@ -17,6 +17,6 @@
 @property (readonly) NSString *role;
 @property (readonly) NSUInteger year;
 @property (readonly) NSString *type;
-
+@property (readonly) NSString *label;
 
 @end

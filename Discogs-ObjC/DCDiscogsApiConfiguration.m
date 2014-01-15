@@ -7,12 +7,13 @@
 //
 
 #import "DCDiscogsApiConfiguration.h"
+#import "DCDiscogsCommon.h"
 
 @implementation DCDiscogsApiConfiguration
 
-+(DCDiscogsApiConfiguration *)configuration
++(void)setUserAgent:(NSString *)userAgentString
 {
-    return [[self alloc] init];
+    [[NSUserDefaults standardUserDefaults] setObject:userAgentString forKey:kDCUserAgentKey];
 }
 
 @end

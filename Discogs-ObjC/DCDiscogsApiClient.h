@@ -20,7 +20,6 @@
 
 @interface DCDiscogsApiClient : NSObject
 
--(id)initWithConfiguration:(DCDiscogsApiConfiguration*)config;
 
 //artists
 -(void)getArtistWithBlock:(NSUInteger)artistId success:(void (^)(DCArtist* artist))successBlock failure:(void (^)(NSError* error))failureBlock;

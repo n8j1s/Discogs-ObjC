@@ -10,8 +10,6 @@
 
 @interface DCDiscogsApiConfiguration : NSObject
 
-@property (nonatomic, strong) NSString *userAgent;
-
-+(DCDiscogsApiConfiguration*)configuration;
++(void)setUserAgent:(NSString*)userAgentString;
 
 @end

@@ -17,7 +17,6 @@
 @property (readonly) NSString *status;
 @property (readonly) NSString *thumb;
 @property (readonly) NSString *format;
-@property (readonly) NSString *label;
 @property (readonly) NSString *resource_url;
 
 @end

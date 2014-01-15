@@ -29,39 +29,45 @@
     [searchString appendFormat:@"&type=%@", kSearchTypeArrayValue(searchRequest.searchType)];
     
     if ([searchRequest.query length] > 0)
-        [searchString appendFormat:@"&q=%@", searchRequest.query];
+        [searchString appendFormat:@"&q=%@", [searchRequest.query dc_urlEncodeString]];
     if ([searchRequest.title length] > 0)
-        [searchString appendFormat:@"&title=%@", searchRequest.title];
+        [searchString appendFormat:@"&title=%@", [searchRequest.title dc_urlEncodeString]];
     if ([searchRequest.release_title length] > 0)
-        [searchString appendFormat:@"&release_title=%@", searchRequest.release_title];
+        [searchString appendFormat:@"&release_title=%@", [searchRequest.release_title  dc_urlEncodeString]];
     if ([searchRequest.credit length] > 0)
-        [searchString appendFormat:@"&credit=%@", searchRequest.credit];
+        [searchString appendFormat:@"&credit=%@", [searchRequest.credit dc_urlEncodeString]];
     if ([searchRequest.anv length] > 0)
-        [searchString appendFormat:@"&anv=%@", searchRequest.anv];
+        [searchString appendFormat:@"&anv=%@", [searchRequest.anv dc_urlEncodeString]];
     if ([searchRequest.label length] > 0)
-        [searchString appendFormat:@"&label=%@", searchRequest.label];
+        [searchString appendFormat:@"&label=%@", [searchRequest.label dc_urlEncodeString]];
     if ([searchRequest.genre length] > 0)
-        [searchString appendFormat:@"&genre=%@", searchRequest.genre];
+        [searchString appendFormat:@"&genre=%@", [searchRequest.genre dc_urlEncodeString]];
     if ([searchRequest.style length] > 0)
-        [searchString appendFormat:@"&style=%@", searchRequest.style];
+        [searchString appendFormat:@"&style=%@", [searchRequest.style dc_urlEncodeString]];
     if ([searchRequest.country length] > 0)
-        [searchString appendFormat:@"&country=%@", searchRequest.country];
+        [searchString appendFormat:@"&country=%@", [searchRequest.country dc_urlEncodeString]];
     if ([searchRequest.year length] > 0)
-        [searchString appendFormat:@"&year=%@", searchRequest.year];
+        [searchString appendFormat:@"&year=%@", [searchRequest.year dc_urlEncodeString]];
     if ([searchRequest.format length] > 0)
-        [searchString appendFormat:@"&format=%@", searchRequest.format];
+        [searchString appendFormat:@"&format=%@", [searchRequest.format dc_urlEncodeString]];
     if ([searchRequest.catno length] > 0)
-        [searchString appendFormat:@"&catno=%@", searchRequest.catno];
+        [searchString appendFormat:@"&catno=%@", [searchRequest.catno dc_urlEncodeString]];
     if ([searchRequest.barcode length] > 0)
-        [searchString appendFormat:@"&barcode=%@", searchRequest.barcode];
+        [searchString appendFormat:@"&barcode=%@", [searchRequest.barcode dc_urlEncodeString]];
     if ([searchRequest.track length] > 0)
-        [searchString appendFormat:@"&track=%@", searchRequest.track];
+        [searchString appendFormat:@"&track=%@", [searchRequest.track dc_urlEncodeString]];
     if ([searchRequest.submitter length] > 0)
-        [searchString appendFormat:@"&submitter=%@", searchRequest.submitter];
+        [searchString appendFormat:@"&submitter=%@", [searchRequest.submitter dc_urlEncodeString]];
     if ([searchRequest.contributor length] > 0)
-        [searchString appendFormat:@"&contributor=%@", searchRequest.contributor];
+        [searchString appendFormat:@"&contributor=%@", [searchRequest.contributor dc_urlEncodeString]];
     
     return [searchString copy];
+}
+
+
+-(NSString*)dc_urlEncodeString
+{
+    return [self stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
 }
 
 

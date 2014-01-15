@@ -7,18 +7,19 @@
 //
 
 #import "DCDiscogsHttpManager.h"
+#import "DCDiscogsCommon.h"
 
-#define kBaseURL @"http://api.discogs.com"
 
 @implementation DCDiscogsHttpManager
 
-+(id)sharedManagerWithConfig:(DCDiscogsApiConfiguration *)config
+
++(id)sharedManager
 {
 
     static DCDiscogsHttpManager *discogClient = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        discogClient = [[DCDiscogsHttpManager alloc] initWithBaseURL:[NSURL URLWithString:kBaseURL] andConfig:config];
+        discogClient = [[DCDiscogsHttpManager alloc] initWithBaseURL:[NSURL URLWithString:kBaseURL]];
     });
     
     return discogClient;
@@ -27,14 +28,14 @@
 
 
 
--(id)initWithBaseURL:(NSURL *)url andConfig:(DCDiscogsApiConfiguration*)config
+-(id)initWithBaseURL:(NSURL *)url
 {
     self = [super initWithBaseURL:url];
     if (self)
     {
         self.responseSerializer = [AFJSONResponseSerializer new];
         self.requestSerializer = [AFJSONRequestSerializer new];
-        [self.requestSerializer setValue:config.userAgent forHTTPHeaderField:@"User-Agent"];
+        [self.requestSerializer setValue:[[NSUserDefaults standardUserDefaults] objectForKey:kDCUserAgentKey] forHTTPHeaderField:@"User-Agent"];
     }
     return self;
 }

@@ -11,6 +11,6 @@
 @interface DCRating : NSObject
 
 @property (readonly) NSUInteger count;
-@property (readonly) NSDecimal *average;
+@property (readonly) NSNumber *average;
 
 @end

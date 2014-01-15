@@ -13,7 +13,7 @@
 
 @property (readonly) NSString *name;
 @property (readonly) NSString *resource_url;
-@property (readonly) NSString *release_url;
+@property (readonly) NSString *releases_url;
 @property (readonly) NSString *uri;
 @property (readonly) NSString *realname;
 @property (readonly) NSString *profile;

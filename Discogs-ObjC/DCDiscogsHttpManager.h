@@ -7,10 +7,9 @@
 //
 
 #import "AFHTTPRequestOperationManager.h"
-#import "DCDiscogsApiConfiguration.h"
 
 @interface DCDiscogsHttpManager : AFHTTPRequestOperationManager
 
-+(id)sharedManagerWithConfig:(DCDiscogsApiConfiguration*)config
++(id)sharedManager;
 
 @end

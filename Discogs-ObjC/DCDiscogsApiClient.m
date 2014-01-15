@@ -9,28 +9,19 @@
 #import "DCDiscogsApiClient.h"
 #import "DCDiscogsHttpManager.h"
 #import "NSString+QueryBuilder.h"
+#import "DCDiscogsCommon.h"
 
-#define kDCURLPathFormatArtists @"/artists/%lu"
-#define kDCURLPathFormatArtistReleases @"/artists/%lu/releases"
-#define kDCURLPathFormatReleases @"/releases/%lu"
-#define kDCURLPathFormatMasters @"/masters/%lu"
-#define kDCURLPathFormatMasterVersions @"/masters/%lu/versions"
-#define kDCURLPathFormatLabels @"/labels/%lu"
-#define kDCURLPathFormatLabelReleases @"/labels/%lu/releases"
-#define kDCURLPathFormatSearch @"/database/search"
 
 @implementation DCDiscogsApiClient
 {
     DCDiscogsHttpManager *httpManager;
 }
 
--(id)initWithConfiguration:(DCDiscogsApiConfiguration *)config
+-(id)init
 {
-    if (!config || [config.userAgent length] == 0)
-        return nil;
-    
     self = [super init];
-    self.
+    httpManager = [DCDiscogsHttpManager sharedManager];
+    return self;
 }
 
 

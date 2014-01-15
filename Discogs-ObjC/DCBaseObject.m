@@ -21,10 +21,10 @@
 -(id)initWithDictionary:(NSDictionary *)dictionary
 {
     self = [super init];
-    if (self)
+    /*if (self)
     {
         [self setValuesForKeysWithDictionary:dictionary];
-    }
+    }*/
     return self;
 }
 

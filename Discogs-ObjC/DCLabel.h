@@ -18,7 +18,7 @@
 @property (readonly) NSString *data_quality;
 @property (readonly) NSString *contact_info;
 @property (readonly) NSDictionary *parent_label;
-@property (readonly) NSArray *subLabels;
+@property (readonly) NSArray *sublabels;
 @property (readonly) NSArray *urls;
 @property (readonly) NSArray *images;
 

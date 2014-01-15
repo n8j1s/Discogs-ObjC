@@ -16,8 +16,11 @@
 #import "DCSearchRequest.h"
 #import "DCSearchResults.h"
 #import "DCArtistReleases.h"
+#import "DCDiscogsApiConfiguration.h"
 
 @interface DCDiscogsApiClient : NSObject
+
+-(id)initWithConfiguration:(DCDiscogsApiConfiguration*)config;
 
 //artists
 -(void)getArtistWithBlock:(NSUInteger)artistId success:(void (^)(DCArtist* artist))successBlock failure:(void (^)(NSError* error))failureBlock;

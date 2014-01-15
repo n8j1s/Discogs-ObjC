@@ -47,6 +47,7 @@
 		845092A81885F132004B3851 /* DCUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 845092841885F131004B3851 /* DCUser.m */; };
 		845092A91885F132004B3851 /* DCVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 845092861885F131004B3851 /* DCVideo.m */; };
 		845092AA1885F132004B3851 /* NSString+QueryBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 845092891885F132004B3851 /* NSString+QueryBuilder.m */; };
+		845092EE1886FFA7004B3851 /* DCDiscogsApiConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 845092ED1886FFA7004B3851 /* DCDiscogsApiConfiguration.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -148,6 +149,8 @@
 		845092871885F131004B3851 /* Discogs-ObjC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Discogs-ObjC.h"; sourceTree = "<group>"; };
 		845092881885F131004B3851 /* NSString+QueryBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+QueryBuilder.h"; sourceTree = "<group>"; };
 		845092891885F132004B3851 /* NSString+QueryBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+QueryBuilder.m"; sourceTree = "<group>"; };
+		845092EC1886FFA7004B3851 /* DCDiscogsApiConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCDiscogsApiConfiguration.h; sourceTree = "<group>"; };
+		845092ED1886FFA7004B3851 /* DCDiscogsApiConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCDiscogsApiConfiguration.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -273,6 +276,8 @@
 				845092881885F131004B3851 /* NSString+QueryBuilder.h */,
 				845092891885F132004B3851 /* NSString+QueryBuilder.m */,
 				845092241885F0EF004B3851 /* Supporting Files */,
+				845092EC1886FFA7004B3851 /* DCDiscogsApiConfiguration.h */,
+				845092ED1886FFA7004B3851 /* DCDiscogsApiConfiguration.m */,
 			);
 			path = "Discogs-ObjC";
 			sourceTree = "<group>";
@@ -401,6 +406,7 @@
 				8450929E1885F132004B3851 /* DCReleaseArtist.m in Sources */,
 				845092A01885F132004B3851 /* DCReleaseFormat.m in Sources */,
 				845092971885F132004B3851 /* DCMasterVersion.m in Sources */,
+				845092EE1886FFA7004B3851 /* DCDiscogsApiConfiguration.m in Sources */,
 				8450929D1885F132004B3851 /* DCRelease.m in Sources */,
 				845092A31885F132004B3851 /* DCReleaseTrack.m in Sources */,
 				8450929A1885F132004B3851 /* DCPagination.m in Sources */,
@@ -601,6 +607,7 @@
 				845092431885F0EF004B3851 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		845092441885F0EF004B3851 /* Build configuration list for PBXNativeTarget "Discogs-ObjCTests" */ = {
 			isa = XCConfigurationList;
@@ -609,6 +616,7 @@
 				845092461885F0EF004B3851 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

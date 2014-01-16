@@ -14,14 +14,20 @@ Uses AFNetworking 2.0 and KeyValueObjectMapper 1.4 to wrap requests to the Disco
 
 ## Installation
 
-* Install Cocoapods
-** [sudo] gem install cocoapods
-** pod setup
-* Create a podfile
-* Add Discogs-ObjC to your podfile with the following text:
-** platform :ios '6.0'<br/>
-pod 'Discogs-ObjC'
-* pod install
+* Install Cocoapods - in terminal type:
+
+	[sudo] gem install cocoapods
+	pod setup
+
+* Create a file called podfile in your project root
+* Add following text to your podfile:
+
+	platform :ios '6.0'
+	pod 'Discogs-ObjC'
+
+* In terminal, type
+
+	pod install
 
 ## Usage
 

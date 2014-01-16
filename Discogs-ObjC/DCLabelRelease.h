@@ -2,8 +2,8 @@
 //  DCLabelRelease.h
 //  Discogs-ObjC
 //
-//  Created by admin on 1/14/14.
-//  Copyright (c) 2014 Ogilvy. All rights reserved.
+//  Created by n8j1s on 1/9/14.
+//  Copyright (c) 2014 n8j1s. All rights reserved.
 //
 
 #import "DCReleaseBase.h"

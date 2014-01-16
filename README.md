@@ -67,7 +67,9 @@ In your AppDelegate.m file add the following line to didFinishLaunchingWithOptio
 	DCDiscogsApiClient *client = [DCDiscogsApiClient new];
     [client getArtistReleasesWithBlock:45 forPage:1 withNumberOfResults:10 success:^(DCArtistReleases *releases) {
         
-        NSLog(@"%lu", (unsigned long)[releases.releases count]);
+        for (DCArtistRelease *release in releases.releases) {
+            NSLog(@"%@", release.title);
+        }
         
     } failure:^(NSError *error) {
         
@@ -140,9 +142,11 @@ In your AppDelegate.m file add the following line to didFinishLaunchingWithOptio
 ```objective-c
 	DCDiscogsApiClient *client = [DCDiscogsApiClient new];
 	[client getLabelReleasesWithBlock:1 forPage:1 withNumberOfResults:10 success:^(DCLabelReleases *releases) {
-        NSLog(@"%lu", (unsigned long)[releases.releases count]);
-
         
+        for (DCLabelRelease *release in releases.releases) {
+            NSLog(@"%@", release.title);
+        }
+
     } failure:^(NSError *error) {
         
         NSLog(@"Error %@", error.debugDescription);

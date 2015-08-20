@@ -45,7 +45,7 @@ In your AppDelegate.m file add the following line to didFinishLaunchingWithOptio
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    [DCDiscogsApiConfiguration setUserAgent:@"My User Agent" andToken:"My Token"];
+    [DCDiscogsApiConfiguration setUserAgent:@"My User Agent" andTokenString:"My Token"];
     return YES;
 }
 ```

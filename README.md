@@ -11,6 +11,7 @@ Uses AFNetworking 2.0 and KeyValueObjectMapper 1.4 to wrap requests to the Disco
 * Wraps responses in well formatted objects
 * Keeps all properties read only
 * Async-only requests using blocks
+* Must generate a developer token on Discogs
 
 ## Installation
 
@@ -44,7 +45,7 @@ In your AppDelegate.m file add the following line to didFinishLaunchingWithOptio
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    [DCDiscogsApiConfiguration setUserAgent:@"My User Agent"];
+    [DCDiscogsApiConfiguration setUserAgent:@"My User Agent" andToken:"My Token"];
     return YES;
 }
 ```

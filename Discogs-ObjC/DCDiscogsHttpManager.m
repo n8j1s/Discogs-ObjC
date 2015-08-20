@@ -35,6 +35,7 @@
     {
         self.responseSerializer = [AFJSONResponseSerializer new];
         self.requestSerializer = [AFJSONRequestSerializer new];
+        [self.requestSerializer setValue:[[NSUserDefaults standardUserDefaults] objectForKey:kDCTokenKey] forHTTPHeaderField:@"Authorization: Discogs token"];
         [self.requestSerializer setValue:[[NSUserDefaults standardUserDefaults] objectForKey:kDCUserAgentKey] forHTTPHeaderField:@"User-Agent"];
     }
     return self;

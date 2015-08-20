@@ -11,9 +11,10 @@
 
 @implementation DCDiscogsApiConfiguration
 
-+(void)setUserAgent:(NSString *)userAgentString
++(void)setUserAgent:(NSString *)userAgentString andTokenString:(NSString*)tokenString
 {
     [[NSUserDefaults standardUserDefaults] setObject:userAgentString forKey:kDCUserAgentKey];
+    [[NSUserDefaults standardUserDefaults] setObject:tokenString forKey:kDCTokenKey];
 }
 
 @end

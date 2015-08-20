@@ -18,6 +18,7 @@
 #define kDCURLPathFormatLabelReleases @"/labels/%lu/releases"
 #define kDCURLPathFormatSearch @"/database/search"
 #define kDCUserAgentKey @"dc_userAgentKey"
+#define kDCTokenKey @"dc_tokenKey"
 
 @interface DCDiscogsCommon : NSObject
 

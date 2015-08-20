@@ -10,6 +10,6 @@
 
 @interface DCDiscogsApiConfiguration : NSObject
 
-+(void)setUserAgent:(NSString*)userAgentString;
++(void)setUserAgent:(NSString*)userAgentString andTokenString:(NSString*)tokenString;
 
 @end

@@ -15,7 +15,7 @@ Uses AFNetworking 2.0 and KeyValueObjectMapper 1.4 to wrap requests to the Disco
 
 ## Installation
 
-* Install Cocoapods - in terminal type:
+* Install CocoaPods - in terminal type:
 
 		[sudo] gem install cocoapods
 		pod setup
